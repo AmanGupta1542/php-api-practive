@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "dbc2ac7c-dfb9-485c-bb67-e8011a03f0fe",
+		"name": "Clg",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18579814",
+		"_collection_link": "https://mistpl-svast-api.postman.co/workspace/New-Team-Workspace~c799645e-398a-4dcf-992f-969e2ce99d0a/collection/18579814-dbc2ac7c-dfb9-485c-bb67-e8011a03f0fe?action=share&source=collection_link&creator=18579814"
+	},
+	"item": [
+		{
+			"name": "Get All Students",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/welcome/students/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"welcome",
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"abc\",\r\n    \"dob\": \"2003-04-02\",\r\n    \"contact\": \"654321\",\r\n    \"email\": \"abc@gmail.com\",\r\n    \"password\": \"abc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/welcome/students/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"welcome",
+						"students",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Student Record",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/welcome/students/40",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"welcome",
+						"students",
+						"40"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Complete Update Student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sonam Jain\",\r\n    \"dob\": \"1998-12-12\",\r\n    \"contact\": \"20000000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/welcome/students/3",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"welcome",
+						"students",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Partial Update Student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"abc def\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/welcome/students/40",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"welcome",
+						"students",
+						"40"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"aman@gmail.com\",\r\n    \"password\": \"aman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/welcome/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"welcome",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
