@@ -32,7 +32,7 @@ loginForm.addEventListener('submit', async (e) => {
     const password = formData.get('password');
 
     try {
-        const response = await fetch('http://localhost/api/index.php/welcome/login', {
+        const response = await fetch('http://localhost/php-api-practive/api/index.php/welcome/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

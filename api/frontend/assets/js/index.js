@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function loadTable() {
     const xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "http://localhost/api/index.php/welcome/students");
+    xhttp.open("GET", "http://localhost/php-api-practive/api/index.php/welcome/students");
     // Append authorization header
     xhttp.setRequestHeader("Authorization", `Bearer ${token}`);
     xhttp.send();
@@ -94,7 +94,7 @@ function loadTable() {
     const password = document.getElementById("password").value;
   
     const xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "http://localhost/api/index.php/welcome/students");
+    xhttp.open("POST", "http://localhost/php-api-practive/api/index.php/welcome/students");
     // Append authorization header
     xhttp.setRequestHeader("Authorization", `Bearer ${token}`);
     xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
@@ -125,7 +125,7 @@ function loadTable() {
 function showUserEditBox(id) {
     // console.log(id);
     const xhttp = new XMLHttpRequest();
-    xhttp.open("GET", `http://localhost/api/index.php/welcome/students/${id}/`);
+    xhttp.open("GET", `http://localhost/php-api-practive/api/index.php/welcome/students/${id}/`);
     // Append authorization header
     xhttp.setRequestHeader("Authorization", `Bearer ${token}`);
     xhttp.send();
@@ -172,7 +172,7 @@ function showUserEditBox(id) {
     const contact = document.getElementById("contact").value;
   
     const xhttp = new XMLHttpRequest();
-    xhttp.open("PUT", `http://localhost/api/index.php/welcome/students/${id}/`);
+    xhttp.open("PUT", `http://localhost/php-api-practive/api/index.php/welcome/students/${id}/`);
     // Append authorization header
     xhttp.setRequestHeader("Authorization", `Bearer ${token}`);
     xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
@@ -201,7 +201,7 @@ function showUserEditBox(id) {
 ///////////////////////  Delete Student   ///////////////////////////
 function userDelete(id) {
     const xhttp = new XMLHttpRequest();
-    xhttp.open("DELETE", `http://localhost/api/index.php/welcome/students/${id}/`);
+    xhttp.open("DELETE", `http://localhost/php-api-practive/api/index.php/welcome/students/${id}/`);
     // Append authorization header
     xhttp.setRequestHeader("Authorization", `Bearer ${token}`);
     xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
